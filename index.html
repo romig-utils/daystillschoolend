@@ -1,0 +1,32 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    .roboto-font {
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-variation-settings:
+        "wdth" 100;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+<body>
+  <h1 class="roboto-font"><span id="val">#</span> days till the end of school.</h1>
+  <script>
+    const targetDate = new Date("May 20, 2026 23:59:59").getTime();
+    const now = new Date().getTime();
+    const diffInDays = Math.ceil((targetDate - now) / (1000 * 60 * 60 * 24));
+    console.log(diffInDays);
+    document.getElementById("val").innerText = diffInDays;
+  </script>
+</body>
